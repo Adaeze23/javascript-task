@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+       <title>First javascript task</title>
+    </head> 
+    <body style="margin-left: 150px;">
+        <h2> My First Javascript Code</h2>
+        <p> 
+          This is my first javascript code that displays my name and list of courses offered
+        </p> 
+
+        <h3 id="my_name">Name:</h3>
+        <h3> Courses </h3>
+        <ol id="course_list"></ol>
+
+        <p> Odd numbers are displayed here </p>
+        <ul id="odd_numbers"></ul>
+
+        <script>
+            var name = "Adaeze Nwaiwu-Odus";
+            var name_element = document.getElementById('my_name');
+            name_element.innerText=name;
+
+            var courses = new Array ('HTML', 'CSS', 'Javascript');
+            var course_list= document.getElementById('course_list');
+
+            for (const course in courses){
+                course_list.innerHTML += `
+                    <li> ${courses[course]} </li>
+                `;
+
+            }
+                
+            
+            var odd = document.getElementById('odd_numbers');
+
+            for (x = 1; x < 200; x++){
+            
+			    var division_number = 2;
+			    
+                if((x % division_number) !== 0){
+                    odd.innerHTML +=`
+                        <li> ${x} </li>
+                    `;
+                }
+                
+            }
+        </script>
+    </body>
+</html>
